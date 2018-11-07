@@ -31,7 +31,9 @@ class HotelList extends React.Component {
     }
 
     sortByRating() {
-        console.log('sortByRating');
+        this.props.dispatch({
+            type: 'hotels.sortByRating',
+        });
     }
 }
 
