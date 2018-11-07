@@ -1,7 +1,8 @@
 import React from 'react';
 import HotelListElement from './HotelListElement'
+import { connect } from 'react-redux';
 
-export default class HotelList extends React.Component {
+class HotelList extends React.Component {
 
     render() {
         return (
@@ -24,3 +25,11 @@ export default class HotelList extends React.Component {
         );
     }
 }
+
+function mapStateToProps(state) {
+    return ({
+        hotels: state.hotels,
+    });
+}
+
+export default connect(mapStateToProps)(HotelList);
