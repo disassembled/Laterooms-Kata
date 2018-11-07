@@ -1,9 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Table } from 'react-bootstrap';
+import { Table, Glyphicon } from 'react-bootstrap';
 import HotelListElement from './HotelListElement'
 
 class HotelList extends React.Component {
+    constructor(props){
+        super(props);
+        this.sortByRating = this.sortByRating.bind(this);
+    }
 
     render() {
         return (
@@ -11,7 +15,7 @@ class HotelList extends React.Component {
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Rating</th>
+                        <th>Rating <Glyphicon glyph="glyphicon glyphicon-sort" onClick={this.sortByRating} /></th>
                         <th>Facilities</th>
                     </tr>
                 </thead>
@@ -24,6 +28,10 @@ class HotelList extends React.Component {
                 </tbody>
             </Table>
         );
+    }
+
+    sortByRating() {
+        console.log('sortByRating');
     }
 }
 
