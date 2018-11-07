@@ -1,4 +1,5 @@
 import React from 'react';
+import HotelList from './HotelList';
 
 export default class App extends React.Component {
 
@@ -34,26 +35,7 @@ export default class App extends React.Component {
     render() {
 
         return (
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Rating</th>
-                        <th>Facilities</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {this.state.hotels.map((hotel, index) => {
-                        return (
-                            <tr key={hotel.id}>
-                                <td>{hotel.name}</td>
-                                <td>{hotel.starRating}</td>
-                                <td>{hotel.facilities.join(', ')}</td>
-                            </tr>
-                        );
-                    })}
-                </tbody>
-            </table>
+            <HotelList hotels={this.state.hotels} />
         );
     }
 }
