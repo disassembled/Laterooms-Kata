@@ -1,12 +1,13 @@
 import React from 'react';
-import HotelListElement from './HotelListElement'
 import { connect } from 'react-redux';
+import { Table } from 'react-bootstrap';
+import HotelListElement from './HotelListElement'
 
 class HotelList extends React.Component {
 
     render() {
         return (
-            <table>
+            <Table bordered hover responsive striped>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -21,7 +22,7 @@ class HotelList extends React.Component {
                         );
                     })}
                 </tbody>
-            </table>
+            </Table>
         );
     }
 }

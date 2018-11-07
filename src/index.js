@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App';
 import { reducers } from './reducers/index';
+import './stylesheets/main.scss';
 
 const hotels = [
     {

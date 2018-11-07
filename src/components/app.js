@@ -6,7 +6,9 @@ export default class App extends React.Component {
     render() {
 
         return (
-            <HotelList />
+            <div  className="container">
+                <HotelList />
+            </div>
         );
     }
 }
