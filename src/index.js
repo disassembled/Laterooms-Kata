@@ -29,6 +29,7 @@ const hotels = [
 
 const initialState = {
     hotels: hotels,
+    ratingSort: -1,
 };
 
 const store = createStore(reducers, initialState);
