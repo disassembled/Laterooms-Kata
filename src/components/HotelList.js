@@ -1,4 +1,5 @@
 import React from 'react';
+import HotelListElement from './HotelListElement'
 
 export default class HotelList extends React.Component {
 
@@ -15,11 +16,7 @@ export default class HotelList extends React.Component {
                 <tbody>
                     {this.props.hotels.map((hotel, index) => {
                         return (
-                            <tr key={hotel.id}>
-                                <td>{hotel.name}</td>
-                                <td>{hotel.starRating}</td>
-                                <td>{hotel.facilities.join(', ')}</td>
-                            </tr>
+                            <HotelListElement key={hotel.id} hotel={hotel} />
                         );
                     })}
                 </tbody>
